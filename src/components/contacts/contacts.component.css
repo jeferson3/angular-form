@@ -1,0 +1,15 @@
+form{
+    width: 500px;
+}
+.row{
+    width: 100%;
+    
+}
+
+.row .md-form{
+    margin-left: 20px;
+}
+
+/* .form-control:focus{
+    background-color: red;
+} */

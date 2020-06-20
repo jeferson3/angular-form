@@ -1,0 +1,32 @@
+.navbar{
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    box-shadow: 1px 1px 2px grey;
+}
+
+.navbar ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar ul li{
+    height: 100%;
+    list-style: none;
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.navbar ul li:hover{
+    background-color: black;
+    color: white;
+
+}

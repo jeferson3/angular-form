@@ -1,0 +1,51 @@
+<div class="form">
+  <form [formGroup]="profileForm" (ngSubmit)='sub()'>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="md-form">
+          <input mdbInput type="text" id="form1" formControlName="firstName" class="form-control"
+            [ngClass]="{'is-invalid':!profileForm.controls.firstName.valid && profileForm.controls.firstName.touched}">
+          <label for="form1">Nome</label>
+          <small class="invalid-feedback">Nome inválido!</small>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="md-form">
+          <input mdbInput type="text" id="form2" formControlName="lastName" class="form-control"
+            [ngClass]="{'is-invalid':!profileForm.controls.lastName.valid && profileForm.controls.lastName.touched}">
+          <label for="form2">Sobrenome</label>
+          <small class="invalid-feedback">Sobrenome inválido!</small>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="md-form">
+          <input mdbInput type="email" id="form3" class="form-control" formControlName='email'
+            [ngClass]="{'is-invalid':!profileForm.controls.email.valid && profileForm.controls.email.touched}">
+          <label for="form3">Email</label>
+          <small class="invalid-feedback">Email inválido!</small>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="md-form">
+          <input mdbInput type="number" id="form4" class="form-control" formControlName='age'
+            [ngClass]="{'is-invalid':!profileForm.controls.age.valid && profileForm.controls.age.touched}">
+          <label for="form4">Idade</label>
+          <small class="invalid-feedback">Idade inválido!</small>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="md-form">
+          <textarea type="text" cols="50" rows="5" id="form5" class="md-textarea form-control" mdbInput></textarea>
+          <label for="form5">Descrição</label>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <button type="submit" class="btn btn-success" [disabled]='!profileForm.valid' mdbWavesEffect>Enviar</button>
+    </div>
+  </form>
+</div>
